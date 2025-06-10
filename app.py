@@ -133,14 +133,12 @@ if page == "Sobre Interpolación":
         st.markdown("""
         **Concepto:** Ajusta una única curva polinomial que pasa por todos los puntos de datos conocidos.
         
-        **Fórmula (Lagrange):** $P(x) = \sum_{j=0}^{n} y_j L_j(x)$
-        **, donde**  $L_j(x) = \prod_{k=0, k \ne j}^{n} \\frac{x - x_k}{x_j - x_k}$
+        **Fórmula (Lagrange):** $P(x) = \sum_{j=0}^{n} y_j L_j(x)$, donde $L_j(x) = \prod_{k=0, k \ne j}^{n} \\frac{x - x_k}{x_j - x_k}$
         
         **Pros:** Puede ser muy precisa si la función subyacente se aproxima bien con un polinomio.
         
         **Contras:** Polinomios de alto grado pueden llevar a oscilaciones (fenómeno de Runge) entre los puntos de datos, especialmente en los extremos.
         """)
-
     with tab3:
         st.markdown("""
         **Concepto:** Divide los datos en segmentos y ajusta un polinomio de bajo grado (a menudo cúbico) a cada segmento. Asegura la suavidad (continuidad de las derivadas) en los límites de los segmentos.
