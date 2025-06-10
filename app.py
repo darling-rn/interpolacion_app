@@ -98,13 +98,13 @@ if page == "Sobre Interpolación":
     st.markdown("<h2 class='subheader'>Sobre Interpolación</h2>", unsafe_allow_html=True)
     st.markdown("""
     <div class="info-block">
-    La **Interpolación** es un método para construir nuevos puntos de datos dentro del rango de un conjunto discreto de puntos de datos conocidos. 
+    La Interpolación es un método para construir nuevos puntos de datos dentro del rango de un conjunto discreto de puntos de datos conocidos. 
     Esencialmente, se trata de "leer entre líneas" en tus datos. Si tienes algunas mediciones en puntos específicos, 
     la interpolación te permite estimar cuál podría ser el valor en cualquier punto intermedio entre esas mediciones.
     </div>
     """, unsafe_allow_html=True)
 
-    st.markdown("<h4>¿Por qué es importante?</h4>")
+    st.markdown("<h3>¿Por qué es importante?</h3>")
     st.write("""
     Muchos fenómenos del mundo real son continuos, pero solo podemos recolectar puntos de datos discretos. 
     La interpolación nos ayuda a:
@@ -114,7 +114,7 @@ if page == "Sobre Interpolación":
     * Hacer predicciones o estimaciones.
     """)
 
-    st.markdown("<h4>Métodos Comunes de Interpolación:</h4>")
+    st.markdown("<h3>Métodos Comunes de Interpolación:</h3>")
     
     tab1, tab2, tab3 = st.tabs(["Interpolación Lineal", "Interpolación Polinomial", "Interpolación por Splines"])
 
@@ -130,10 +130,10 @@ if page == "Sobre Interpolación":
         """)
     
     with tab2:
-        st.markdown("""
+        st.markdown(r"""
         **Concepto:** Ajusta una única curva polinomial que pasa por todos los puntos de datos conocidos.
         
-        **Fórmula (Lagrange):** $P(x) = \sum_{j=0}^{n} y_j L_j(x)$, donde $L_j(x) = \prod_{k=0, k \ne j}^{n} \\frac{x - x_k}{x_j - x_k}$
+        **Fórmula (Lagrange):** $P(x) = \sum_{j=0}^{n} y_j L_j(x), donde  L_j(x) = \prod_{k=0, k \ne j}^{n} \\frac{x - x_k}{x_j - x_k}$
         
         **Pros:** Puede ser muy precisa si la función subyacente se aproxima bien con un polinomio.
         
